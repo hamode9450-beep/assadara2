@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sport Pro - الصدارة للمستلزمات الرياضية والالعاب</title>
+<style>
+    body { font-family: Tahoma, sans-serif; margin: 0; background:#f5f5f5; }
+    header { background:#000; color:#fff; padding:15px; text-align:center; font-size:24px; font-weight:bold; }
+    nav { background:#222; display:flex; justify-content:center; }
+    nav a { color:#fff; padding:15px 25px; text-decoration:none; font-size:18px; }
+    nav a:hover { background:#444; }
+    section { padding:30px; display:none; }
+    section.active { display:block; }
+
+    .grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+        gap:20px;
+    }
+    .card {
+        background:#fff;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 0 10px #ccc;
+        text-align:center;
+    }
+    .card img { width:100%; border-radius:10px; }
+    footer { background:#000; color:#fff; text-align:center; padding:15px; margin-top:30px; }
+</style>
+
+<script>
+    function showPage(id){
+        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
+</script>
+</head>
+<body>
+
+<header>ASSADARA-SPORT</header>
+
+<nav>
+    <a href="#" onclick="showPage('home')">الرئيسية</a>
+    <a href="#" onclick="showPage('products')">المنتجات</a>
+    <a href="#" onclick="showPage('services')">الخدمات</a>
+    <a href="#" onclick="showPage('contact')">التواصل</a>
+</nav>
+
+<!-- الصفحة 1: الرئيسية -->
+<section id="home" class="active">
+    <h2>مرحباً بكم في الصدارة للرياضة</h2>
+    <p>أفضل متجر للألعاب ولوازم الرياضة بجودة عالية وأسعار مناسبة.</p>
+    <img src="https://img.freepik.com/premium-photo/skateboarder-is-riding-skateboard-with-blue-background_898324-1041.jpg" style="width:100%; border-radius:15px;">
+</section>
+
+<!-- الصفحة 2: المنتجات -->
+<section id="products">
+    <h2>منتجاتنا</h2>
+
+    <h3>📌 أحذية رياضية</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1200">
+            <p>حذاء رياضي – جودة ممتازة</p>
+        </div>
+
+        <div class="card">
+            <img src="https://data.arab48.com/data/news/2023/07/19/640-376/20230719070539.jpg">
+            <p>حذاء جري احترافي</p>
+        </div>
+
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71ySGyq3GjL._AC_SY625_.jpg">
+            <p>حذاء كرة قدم</p>
+        </div>
+    </div>
+
+    <h3 style="margin-top:40px;">🧩 ألعاب التركيب</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="https://media.zid.store/thumbs/bfc32e19-5aee-4707-b09d-e1160fc369ca/95285cfc-af5d-44bd-9fd8-b14a53436355-thumbnail-770x770-70.jpg">
+            <p>لعبة مكعبات تركيب – 47 قطعة</p>
+        </div>
+
+        <div class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.RxmcOpQTp4qR_SHCbnGU0gHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+            <p>مكعبات تعليمية للأطفال</p>
+        </div>
+
+        <div class="card">
+            <img src="https://thankspanda.com/wp-content/uploads/2023/08/%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8-%D8%A7%D9%84%D8%AE%D8%B4%D8%A8%D9%8A%D8%A9-55-%D9%82%D8%B7%D8%B9%D8%A9.png">
+            <p>لعبة تركيب الأشكال الهندسية</p>
+        </div>
+    </div>
+</section>
+
+<!-- الصفحة 3: الخدمات -->
+<section id="services">
+    <h2>خدماتنا</h2>
+    <ul style="font-size:20px; line-height:2;">
+        <li>بيع منتجات رياضية عالية الجودة</li>
+        <li>قسم ألعاب ذكاء وتنمية مهارات</li>
+        <li>تجهيز صالات رياضية صغيرة</li>
+        <li>توفير ألعاب مدارس وروضات</li>
+        <li>خدمة التوصيل داخل طرابلس</li>
+    </ul>
+</section>
+
+<!-- الصفحة 4: التواصل -->
+<section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📍 مصراته – ليبيا</p>
+    <p>📞 092-3034000</p>
+    <p>📧 assadaracompany@gmail.com</p>
+   
+
+    <img src="https://images.unsplash.com/photo-1581091870627-3a61a5c57a49?q=80&w=1200" 
+         style="width:100%; border-radius:15px; margin-top:20px;">
+</section>
+
+<footer>© 2025-2026 Sport Pro – جميع الحقوق محفوظة</footer>
+
+</body>
+</html>
